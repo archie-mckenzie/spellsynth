@@ -16,9 +16,9 @@ Advised by Professor Brian Kernighan
 
 ## Introduction
 
-Spellsynth is a system for fine-tuning powerful LLM translators.
+Spellsynth is a system for fine-tuning powerful LLM translators. The fine-tuning datasets in <code>data/final</code>, as well as the weights to the <code>llama-2</code>-based models, are freely licensed.
 
-This repo contains the data and instructions for fine-tuning four language models, using the OpenAI (<a href='https://platform.openai.com'>openai.com</a>) and Replicate (<a href='https://replicate.com'>replicate.com</a>) platforms. The fine-tuning datasets in <code>data/final</code>, as well as the weights to the <code>llama-2</code>-based models, are freely licensed. 
+This repo contains the data and instructions for fine-tuning four language models, using the OpenAI (<a href='https://platform.openai.com'>openai.com</a>) and Replicate (<a href='https://replicate.com'>replicate.com</a>) platforms.
 
 <ul>
     <li><code>spellsynth-el-llama-2</code> and <code>spellsynth-el-gpt4</code></li>
@@ -55,3 +55,9 @@ REPLICATE_API_TOKEN='YOUR_REPLICATE_API_TOKEN'
 ```
 
 You only need API keys for the platforms you are using. 
+
+## Data
+
+### Sourcing
+
+<a href='https://tatoeba.org'>Tatoeba.org</a> is a free digital collection of sentences and translations. Download the latest language pair data from <a href='https://tatoeba.org/en/downloads'>Tatoeba</a> into `data/raw`. Or, decompress all files in `data/compressed` and copy the result into `data/raw`.
