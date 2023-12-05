@@ -18,7 +18,7 @@ Advised by Professor Brian Kernighan
 
 Spellsynth is a system for fine-tuning powerful LLM translators.
 
-This repo contains the data and scripts for four translators:
+This repo contains the data and instructions for fine-tuning four language models, using the OpenAI (<a href='https://platform.openai.com'>openai.com</a>) and Replicate (<a href='https://replicate.com'>replicate.com</a>) platforms. The fine-tuning datasets in <code>data/final</code>, as well as the weights to the <code>llama-2</code>-based models, are freely licensed. 
 
 <ul>
     <li><code>spellsynth-el-llama-2</code> and <code>spellsynth-el-gpt4</code></li>
