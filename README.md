@@ -21,7 +21,7 @@ Spellsynth is a system for fine-tuning powerful LLM translators.
 This repo contains the data and scripts for four translators:
 
 <ul>
-    <li>`spellsynth-el-llama-2` and `spellsynth-el-gpt4`</li>
+    <li><code>spellsynth-el-llama-2</code> and `spellsynth-el-gpt4`</li>
     <li>`kaleidograph-llama-2` and `kaleidograph-gpt-4`</li>
 </ul>
 
