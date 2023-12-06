@@ -1,4 +1,5 @@
 .env
+.DS_Store
 
 spellsynth-env
 spellsynth-env/*
