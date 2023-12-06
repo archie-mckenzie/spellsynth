@@ -60,4 +60,10 @@ You only need API keys for the platforms you are using.
 
 ### Sourcing
 
-<a href='https://tatoeba.org'>Tatoeba.org</a> is a free digital collection of sentences and translations. Download the latest language pair data from <a href='https://tatoeba.org/en/downloads'>Tatoeba</a> into `data/raw`. Or, decompress all files in `data/compressed` and copy the result into `data/raw`.
+<a href='https://tatoeba.org'>Tatoeba.org</a> is a free digital collection of sentences and translations. <a href='https://tatoeba.org/en/downloads'>Download</a> the latest language pair data into `data/raw`. Or, decompress all files in `data/raw/compressed` and copy the result into `data/raw`.
+
+Sentence pair data used for `spellsynth-el` models: English-Greek (`en-el.tsv`).
+
+Sentence pair data used for `kaleidograph` models:
+
+
