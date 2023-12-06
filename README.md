@@ -60,10 +60,55 @@ You only need API keys for the platforms you are using.
 
 ### Sourcing
 
-<a href='https://tatoeba.org'>Tatoeba.org</a> is a free digital collection of sentences and translations. <a href='https://tatoeba.org/en/downloads'>Download</a> the latest language pair data into `data/raw`. Or, decompress all files in `data/raw/compressed` and copy the result into `data/raw`.
+<a href='https://tatoeba.org'>Tatoeba.org</a> is a free digital collection of sentences and translations. <a href='https://tatoeba.org/en/downloads'>Download</a> the latest language pair data into `data/raw` or decompress all files in `data/raw/compressed`. Copy the result into a new folder `data/raw/uncompressed`.
 
-Sentence pair data used for `spellsynth-el` models: English-Greek (`en-el.tsv`).
+Raw sentence pair data used for `spellsynth-el` models: English-Greek (`en-el.tsv`).
 
-Sentence pair data used for `kaleidograph` models:
+Raw sentence pair data used for `kaleidograph` models: twenty languages, chosen based on availability of data and worldwide reach:
+
+<ul>
+    <li>
+        English
+    </li>
+    <li>
+        Romance languages
+        <ul>
+            <li>French, Spanish, Portuguese, Italian</li>
+        </ul>
+    </li>
+    <li>
+        Germanic languages
+        <ul>
+            <li>German, Dutch</li>
+        </ul>
+    </li>
+    <li>
+        European (other)
+        <ul>
+            <li>Greek, Russian, Polish</li>
+        </ul>
+    </li>
+    <li>
+        East Asian
+        <ul>
+            <li>Chinese, Japanese, Korean</li>
+        </ul>
+    </li>
+    <li>
+        West Asian
+        <ul>
+            <li>Hebrew, Arabic, Persian, Turkish</li>
+        </ul>
+    </li>
+    <li>
+        Global (other)
+        <ul>
+            <li>Hindi, Swahili, Indonesian</li>
+        </ul>
+    </li>
+</ul>
+
+Note: all sentence data was collected on 12/6/23. 
+
 
 
