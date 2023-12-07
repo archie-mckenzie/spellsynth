@@ -6,4 +6,6 @@ spellsynth-env
 spellsynth-env/*
 
 data/raw/uncompressed/*
+!data/raw/uncompressed/README.md
 data/processed/*
+!data/processed/README.md
