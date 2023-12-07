@@ -62,9 +62,11 @@ You only need API keys for the platforms you are using.
 
 <a href='https://tatoeba.org'>Tatoeba.org</a> is a free digital collection of sentences and translations. <a href='https://tatoeba.org/en/downloads'>Download</a> the latest language pair data into `data/raw` or decompress all files in `data/raw/compressed`. Copy the result into a new folder `data/raw/uncompressed`.
 
+### Specification
+
 Raw sentence pair data used for `spellsynth-el` models: English-Greek (`en-el.tsv`).
 
-Raw sentence pair data used for `kaleidograph` models: twenty languages, chosen based on availability of data and worldwide reach:
+Raw sentence pair data used for `kaleidograph` models: twenty languages, chosen based on availability of data and worldwide reach. These include:
 
 <ul>
     <li>
@@ -110,5 +112,4 @@ Raw sentence pair data used for `kaleidograph` models: twenty languages, chosen 
 
 Note: all sentence data was collected on 12/6/23. 
 
-
-
+### Example
