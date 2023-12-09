@@ -60,6 +60,8 @@ def main(data_filepaths, language_prompts, output_directory):
                     "completion": (data["el"] if prompt_object["input"] == "en" else data["en"]),
                 })
 
+    random.shuffle(final_dataset)
+
     openai_tokens = write_as_jsonl(format_per_openai(final_dataset), f'{output_directory}/openai.jsonl')
     print(f'{openai_tokens} tokens written to {output_directory}/openai.jsonl')
     
@@ -87,5 +89,5 @@ if __name__ == '__main__':
         }
     ]
     OUTPUT_DIRECTORY = 'data/final/spellsynth-el'
-    # main(DATA_FILEPATHS, LANGUAGE_PROMPTS, OUTPUT_DIRECTORY)
+    main(DATA_FILEPATHS, LANGUAGE_PROMPTS, OUTPUT_DIRECTORY)
     # commented out to avoid accidentally rewriting files
