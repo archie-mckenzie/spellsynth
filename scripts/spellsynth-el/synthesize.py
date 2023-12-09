@@ -10,7 +10,7 @@ import random
 from typing import List, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError
 import time, datetime
-from gpt import complete
+from call_gpt4 import complete
 
 # ----- STATS ----- #
 
@@ -43,7 +43,6 @@ def main(
 
     with open(sentences_filepath, 'r') as file:
         sentences = json.load(file)
-        random.shuffle(sentences)
 
     stats = SynthesisStats(update_interval, target_size)
 
