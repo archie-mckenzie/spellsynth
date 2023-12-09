@@ -1,12 +1,23 @@
+# scripts/spellsynth-el/format_sentences.py
+# Format sentences from raw .tsv to .json
+# Author: Archie McKenzie 
+# © 2023, MIT License
+
+# ----- IMPORTS ----- #
+
 import csv
 import json
 import tiktoken
+
+# ----- FUNCTIONS ----- #
 
 def count_tokens(string: str):
     enc = tiktoken.get_encoding("cl100k_base")
     return len(enc.encode(string))
 
-def main(dataset_filepath):
+# ----- MAIN ----- #
+
+def main(dataset_filepath: str):
     sentences = []
     total_tokens = 0
 
@@ -24,6 +35,8 @@ def main(dataset_filepath):
 
     print(len(sentences))
     print(total_tokens)
+
+# ----- SETUP ----- #
 
 if __name__ == '__main__':
     DATASET_FILEPATH = 'data/raw/uncompressed/en-el.tsv'
