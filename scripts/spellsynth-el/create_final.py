@@ -54,16 +54,17 @@ def main(data_filepaths, language_prompts, output_directory):
             dataset = json.load(file)
 
         for data in dataset:
-            selected_prompt = random.choices(language_prompts, weights=[prompt["p"] for prompt in language_prompts], k=1)[0]
-            final_dataset.append({
-                "prompt": selected_prompt["prompt"] + (data["en"] if selected_prompt["input"] == "en" else data["el"]),
-                "completion": (data["el"] if selected_prompt["input"] == "en" else data["en"]),
-            })
+            for prompt_object in language_prompts:
+                final_dataset.append({
+                    "prompt": prompt_object["prompt"] + (data["en"] if prompt_object["input"] == "en" else data["el"]),
+                    "completion": (data["el"] if prompt_object["input"] == "en" else data["en"]),
+                })
 
     openai_tokens = write_as_jsonl(format_per_openai(final_dataset), f'{output_directory}/openai.jsonl')
     print(f'{openai_tokens} tokens written to {output_directory}/openai.jsonl')
     
-    #replicate_jsonl = convert_to_jsonl(format_per_replicate(final_dataset))
+    replicate_tokens = write_as_jsonl(final_dataset, f'{output_directory}/replicate.jsonl')
+    print(f'{replicate_tokens} tokens written to {output_directory}/replicate.jsonl')
 
 # ----- SETUP ----- #
 
@@ -75,17 +76,16 @@ if __name__ == '__main__':
     ]
     LANGUAGE_PROMPTS = [
         {
-            "p": 0.5,
             "input": "en",
             "output": "el",
             "prompt": "Translate from English to Greek:\n\n"
         },
         {
-            "p": 0.5,
             "input": "el",
             "output": "en",
             "prompt": "Translate from Greek to English:\n\n"
         }
     ]
     OUTPUT_DIRECTORY = 'data/final/spellsynth-el'
-    main(DATA_FILEPATHS, LANGUAGE_PROMPTS, OUTPUT_DIRECTORY)
+    # main(DATA_FILEPATHS, LANGUAGE_PROMPTS, OUTPUT_DIRECTORY)
+    # commented out to avoid accidentally rewriting files
