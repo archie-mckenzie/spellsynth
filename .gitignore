@@ -9,8 +9,8 @@ data/raw/uncompressed/*
 !data/raw/uncompressed/README.md
 !data/raw/uncompressed/en-el.tsv
 
-data/processed/*
+data/processed/spellsynth-el/*
 !data/processed/spellsynth-el/README.md
-!data/processed/spellsynth-el/all.zip
+!data/processed/spellsynth-el/all-el.zip
 !data/processed/README.md
 !data/processed/en-el-sentences.json
